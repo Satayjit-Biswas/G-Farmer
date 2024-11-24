@@ -1,8 +1,10 @@
 /*======================
    01. Google fonts
 ========================*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap');
 
 /*======================
    02. Basic css
@@ -37,9 +39,38 @@ section {
 
 body {
 	line-height: 26px;
-	font-family: 'Open Sans';
+	font-family: 'Poppins';
 	background-color: #fff;
-	color: #333b55;
+	color: #031C06;
+}
+
+h1 {
+	font-size: 40px;
+	font-family: "Hedvig Letters Sans", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+h3 {
+	color: #000000;
+	font-size: 80px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 100px;
+}
+
+h4 {
+	font-size: 32px;
+	line-height: 56px;
+	letter-spacing: 0.64px;
+	font-weight: 500;
+}
+
+p {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 32px;
 }
 
 ol,
@@ -54,7 +85,7 @@ a:hover {
 button:focus,
 a:focus,
 input:focus,
-textarea:focus{
+textarea:focus {
 	outline: none;
 }
 
@@ -184,24 +215,31 @@ textarea:focus{
 	12.5% {
 		-webkit-transform: rotate(135deg);
 	}
+
 	25% {
 		-webkit-transform: rotate(270deg);
 	}
+
 	37.5% {
 		-webkit-transform: rotate(405deg);
 	}
+
 	50% {
 		-webkit-transform: rotate(540deg);
 	}
+
 	62.5% {
 		-webkit-transform: rotate(675deg);
 	}
+
 	75% {
 		-webkit-transform: rotate(810deg);
 	}
+
 	87.5% {
 		-webkit-transform: rotate(945deg);
 	}
+
 	to {
 		-webkit-transform: rotate(1080deg);
 	}
@@ -212,30 +250,37 @@ textarea:focus{
 		-webkit-transform: rotate(135deg);
 		transform: rotate(135deg);
 	}
+
 	25% {
 		-webkit-transform: rotate(270deg);
 		transform: rotate(270deg);
 	}
+
 	37.5% {
 		-webkit-transform: rotate(405deg);
 		transform: rotate(405deg);
 	}
+
 	50% {
 		-webkit-transform: rotate(540deg);
 		transform: rotate(540deg);
 	}
+
 	62.5% {
 		-webkit-transform: rotate(675deg);
 		transform: rotate(675deg);
 	}
+
 	75% {
 		-webkit-transform: rotate(810deg);
 		transform: rotate(810deg);
 	}
+
 	87.5% {
 		-webkit-transform: rotate(945deg);
 		transform: rotate(945deg);
 	}
+
 	to {
 		-webkit-transform: rotate(1080deg);
 		transform: rotate(1080deg);
@@ -246,9 +291,11 @@ textarea:focus{
 	0% {
 		-webkit-transform: rotate(130deg);
 	}
+
 	50% {
 		-webkit-transform: rotate(-5deg);
 	}
+
 	to {
 		-webkit-transform: rotate(130deg);
 	}
@@ -259,10 +306,12 @@ textarea:focus{
 		-webkit-transform: rotate(130deg);
 		transform: rotate(130deg);
 	}
+
 	50% {
 		-webkit-transform: rotate(-5deg);
 		transform: rotate(-5deg);
 	}
+
 	to {
 		-webkit-transform: rotate(130deg);
 		transform: rotate(130deg);
@@ -273,9 +322,11 @@ textarea:focus{
 	0% {
 		-webkit-transform: rotate(-130deg);
 	}
+
 	50% {
 		-webkit-transform: rotate(5deg);
 	}
+
 	to {
 		-webkit-transform: rotate(-130deg);
 	}
@@ -286,10 +337,12 @@ textarea:focus{
 		-webkit-transform: rotate(-130deg);
 		transform: rotate(-130deg);
 	}
+
 	50% {
 		-webkit-transform: rotate(5deg);
 		transform: rotate(5deg);
 	}
+
 	to {
 		-webkit-transform: rotate(-130deg);
 		transform: rotate(-130deg);
@@ -309,7 +362,7 @@ textarea:focus{
 }
 
 .hamburger-menu span {
-	background: #847631;
+	background: #027351;
 	width: 30px;
 	height: 3px;
 	display: block;
@@ -399,10 +452,14 @@ header {
 /*sticky START CSS*/
 header.sticky {
 	-webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-    -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
-    -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
-    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+	animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+	-webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+	-moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+}
+
+.logo {
+	max-width: 84px;
 }
 
 #menu {
@@ -424,7 +481,7 @@ header.sticky {
 	transition: 0.3s;
 }
 
-#menu li:last-child a{
+#menu li:last-child a {
 	padding-right: 0;
 }
 
@@ -454,4 +511,27 @@ header.sticky {
 
 .back-to-top i {
 	color: #fff;
+}
+
+
+/* hero_section */
+
+.hero_section {
+	min-height: 100vh;
+	background-color: #027351;
+}
+
+.owl-carousel {
+	pointer-events: none;
+}
+
+.owl-carousel img {
+	max-height: 100vh;
+	object-fit: cover;
+}
+
+
+/* hero_section */
+footer{
+	padding:  40px 0;
 }

@@ -84,30 +84,31 @@
         function client_carouselInit() {
             $('.owl-carousel.client_carousel').owlCarousel({
                 loop: true,
-                margin: 30,
-                items: 5,
+                margin: 0,
+                items: 1,
                 autoplay: true,
-                autoplayTimeout: 1500,
-                autoplayHoverPause: true,
+                autoplayTimeout: 2500,
+                autoplayHoverPause: false,
                 nav: false,
                 dots: false,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    390: {
-                        items: 2
-                    },
-                    575:{
-                        items: 3
-                    },
-                    768: {
-                        items: 4
-                    },
-                    992: {
-                        items: 5
-                    }
-                }
+                responsive:false,
+                // responsive: {
+                //     0: {
+                //         items: 1
+                //     },
+                //     390: {
+                //         items: 2
+                //     },
+                //     575:{
+                //         items: 3
+                //     },
+                //     768: {
+                //         items: 4
+                //     },
+                //     992: {
+                //         items: 5
+                //     }
+                // }
             });
         }
         client_carouselInit();

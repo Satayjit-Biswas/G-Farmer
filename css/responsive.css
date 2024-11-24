@@ -3,7 +3,9 @@
 	
 }
 @media (min-width: 1400px) { 
-	
+	.container{
+		max-width: 1475px;
+	}
 }
 @media (min-width: 1200px) { 
 	

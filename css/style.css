@@ -70,7 +70,7 @@ p {
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 32px;
+	line-height: 28px;
 }
 
 ol,
@@ -89,6 +89,26 @@ textarea:focus {
 	outline: none;
 }
 
+.link_Underline a {
+	position: relative;
+	display: inline;
+}
+
+.link_Underline a::after {
+	position: absolute;
+	content: '';
+	background-color: #027351;
+	width: 0;
+	height: 1px;
+	transition: .3s;
+	left: 0;
+	bottom: -5px;
+}
+
+.link_Underline a:hover::after {
+	width: 100%;
+
+}
 
 /*Proloader START CSS*/
 .preloader {
@@ -174,7 +194,7 @@ textarea:focus {
 	height: 100%;
 	border-style: solid;
 	/* Spinner Color */
-	border-color: #f9fb76 #f9fb76 transparent;
+	border-color: #f9fb76 #0000001a transparent;
 	border-radius: 50%;
 	border-width: 6px;
 }
@@ -433,19 +453,14 @@ textarea:focus {
 
 
 header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
-	height: 70px;
-	line-height: 70px;
+	height: 80px;
+	line-height: 80px;
 	z-index: 1024;
 	width: 100%;
-	-webkit-transition: background 0.3s;
-	-o-transition: background 0.3s;
-	transition: background 0.3s;
-	background: -webkit-gradient(linear, left bottom, left top, color-stop(24%, #faffa9), to(#fff));
-	background: -o-linear-gradient(bottom, #faffa9 24%, #fff 100%);
-	background: linear-gradient(360deg, #faffa9 24%, #fff 100%);
+	background-color: #00000033;
 
 }
 
@@ -463,7 +478,7 @@ header.sticky {
 }
 
 #menu {
-	text-align: right;
+	text-align: left;
 }
 
 #menu li {
@@ -472,13 +487,15 @@ header.sticky {
 }
 
 #menu li a {
-	font-size: 13px;
-	text-transform: uppercase;
-	color: #000000;
-	padding: 0 32px;
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	margin: 0 22px;
+	padding: 0;
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
 	transition: 0.3s;
+	font-weight: 400;
 }
 
 #menu li:last-child a {
@@ -487,11 +504,77 @@ header.sticky {
 
 #menu>li>a.active,
 #menu>li>a:hover {
-	color: #9e6919;
+	color: #ffffff;
+}
+
+.link_Underline a::after {
+	background-color: #fff;
+}
+.menu_btn{
+	text-align: right;
+	padding-right: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu_btn a {
+	color: #fff;
+	background-color: #218838;
+	border-color: #1e7e34;
+	padding: 20px 10px;
+	border-radius: 5px;
+	text-transform: capitalize;
+	display: inline-block;
+	transition: .3s;
+	line-height: 0;
+}
+.menu_btn .L_active{
+	background-color: #fff;
+	color: #000;
+}
+.menu_btn a:hover{
+	opacity: .8;
 }
 
 
+.drop_down {
+	position: relative;
+	cursor: pointer;
+}
 
+.drop_down i {
+	padding-left: 5px;
+	transition: .3s;
+}
+.drop_down:hover>i {
+	transform: rotateX(180deg);
+}
+
+
+.drop_down_box {
+	position: absolute;
+	top: 88px;
+	left: 0;
+	width: 150px;
+	display: none;
+}
+.drop_down_box ul,.drop_down_box ul li{
+	display: block !important;
+	background-color: #ffffff;
+}
+.drop_down_box>ul>li>a{
+	display: block !important;
+	color: #000 !important;
+	padding: 5px 0 5px 10px!important;
+	margin: 0 !important;
+	line-height: 30px;
+}
+.drop_down_box a:hover{
+	background-color: #e2e2e2;
+}
+.drop_down:hover>.drop_down_box {
+	display: block ;
+}
 /*return-to-top START CSS*/
 
 .back-to-top {
@@ -532,6 +615,32 @@ header.sticky {
 
 
 /* hero_section */
-footer{
-	padding:  40px 0;
+footer {
+	padding: 50px 0;
+}
+
+.footer_top_box h5 {
+	padding-bottom: 15px;
+}
+
+.footer_sub_box {
+	padding: 15px 0;
+}
+
+.footer_sub_box a {
+	font-weight: 500;
+	color: #000;
+}
+
+.f-link p {
+	padding-bottom: 15px;
+}
+
+.f-link p span {
+	padding-right: 20px;
+}
+
+.f-link p i {
+	color: #000000;
+	font-weight: 300;
 }

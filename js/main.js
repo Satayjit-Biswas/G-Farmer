@@ -1,7 +1,7 @@
 (function ($) {
     "use strict";
 
-    $(window).on('load', function(){
+    $(window).on('load', function () {
         //===== Prealoder
         $('.preloader').delay(500).fadeOut(500);
 
@@ -28,7 +28,7 @@
 
     $(document).ready(function () {
         //05. sticky header
-        function sticky_header(){
+        function sticky_header() {
             var wind = $(window);
             var sticky = $('header');
             wind.on('scroll', function () {
@@ -84,6 +84,7 @@
         function client_carouselInit() {
             $('.owl-carousel.client_carousel').owlCarousel({
                 loop: true,
+                animateOut: 'fadeOut', 
                 margin: 0,
                 items: 1,
                 autoplay: true,
@@ -91,7 +92,7 @@
                 autoplayHoverPause: false,
                 nav: false,
                 dots: false,
-                responsive:false,
+                responsive: false,
                 // responsive: {
                 //     0: {
                 //         items: 1
@@ -113,6 +114,40 @@
         }
         client_carouselInit();
 
+        //10. Client Slider Initialize
+        function testimonial() {
+            $('.owl-carousel.testimonial_carousel').owlCarousel({
+                loop: true,
+                margin: 0,
+                items: 1,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: false,
+                nav: true,
+                navText: ["<i class='fas fa-arrow-left'></i>","<i class='fas fa-arrow-right'></i>"],
+                dots: false,
+                responsive: false,
+                // responsive: {
+                //     0: {
+                //         items: 1
+                //     },
+                //     390: {
+                //         items: 2
+                //     },
+                //     575:{
+                //         items: 3
+                //     },
+                //     768: {
+                //         items: 4
+                //     },
+                //     992: {
+                //         items: 5
+                //     }
+                // }
+            });
+        }
+        testimonial();
+
         //11. Video Popup Initialize
         function videoPopupInit() {
             $('#play-video').magnificPopup({
@@ -120,14 +155,14 @@
                 iframe: {
                     patterns: {
                         youtube: {
-                          index: 'youtube.com/', 
+                            index: 'youtube.com/',
 
-                          id: 'v=',
-                          src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+                            id: 'v=',
+                            src: 'https://www.youtube.com/embed/%id%?autoplay=1'
                         },
                     },
 
-                  srcAction: 'iframe_src',
+                    srcAction: 'iframe_src',
                 }
             });
         }
@@ -135,3 +170,34 @@
     });
 
 })(jQuery);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const textElement = document.getElementById("text");
+    const texts = ["Supply Chain", "Agriculture", "Financing"];
+    let currentIndex = 0;
+
+    function changeText() {
+        // Step 1: Fade in
+        textElement.style.opacity = "1";
+
+        // Step 2: Wait while visible (hold at full opacity)
+        setTimeout(() => {
+            // Step 3: Fade out after holding
+            textElement.style.opacity = "0";
+        }, 3500); // Wait 3 seconds before starting fade out
+
+        // Step 4: Change text after fading out is complete
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % texts.length;
+            textElement.textContent = texts[currentIndex];
+        }, 8000); // Total of 6 seconds: 3s fade in + 3s fade out
+    }
+
+    // Start the first change and loop every 6 seconds
+    changeText();
+    setInterval(changeText, 8000); // Repeat every 6 seconds
+});
+
+
+
+

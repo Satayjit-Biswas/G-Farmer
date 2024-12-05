@@ -84,7 +84,7 @@
         function client_carouselInit() {
             $('.owl-carousel.client_carousel').owlCarousel({
                 loop: true,
-                animateOut: 'fadeOut', 
+                animateOut: 'fadeOut',
                 margin: 0,
                 items: 1,
                 autoplay: true,
@@ -121,12 +121,12 @@
                 margin: 0,
                 items: 1,
                 autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: false,
+                autoplayTimeout: 5000, // Slows down the time between slides (5 seconds)
+                autoplayHoverPause: true, // Pauses on hover for better control
+                smartSpeed: 2000, // Slows the transition speed (1 second)
                 nav: true,
-                navText: ["<i class='fas fa-arrow-left'></i>","<i class='fas fa-arrow-right'></i>"],
+                navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"],
                 dots: false,
-                responsive: false,
                 // responsive: {
                 //     0: {
                 //         items: 1

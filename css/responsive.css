@@ -1,42 +1,53 @@
 /*Extra large devices (large desktops, 1200px and up)*/
-@media (max-width: 1399px){
-	
-}
-@media (min-width: 1400px) { 
-	.container{
+@media (max-width: 1399px) {}
+
+@media (min-width: 1400px) {
+	.container {
 		max-width: 1475px;
 	}
 }
-@media (min-width: 1200px) { 
-	
-}
 
-@media (max-width: 1199px) { 
-	
+@media (min-width: 1200px) {}
+
+@media (max-width: 1199px) {
+	h2 {
+		font-size: 34px;
+		line-height: 50px;
+	}
+
+	h4 {
+		font-size: 20px;
+		line-height: 36px;
+		letter-spacing: 0.64px;
+		font-weight: 500;
+	}
+
+	.who_we_right h3 {
+		font-size: 40px;
+	}
 }
 
 @media (max-width: 991px) {
-	#menu{
+	#menu {
 		display: none;
 	}
 
 	.hamburger-menu {
 		display: block;
 	}
+
 	.ofcavas-menu {
 		display: block;
 	}
-	
+
+	.menu_btn {
+		display: none;
+	}
+
 }
 
 /*Medium devices (tablets, 767px and down)*/
-@media (max-width: 767px) {
-	
-}
+@media (max-width: 767px) {}
 
 /*Small devices (landscape phones, 575px and down)*/
-@media (max-width: 575px) {
-	
-}
-
-
+@media (max-width: 575px) {}
